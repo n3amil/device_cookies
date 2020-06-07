@@ -13,10 +13,10 @@ jobs:
         uses: MilesChou/composer-action/7.1/install@master
         with:
           args: install --no-progress --ignore-platform-reqs
-      - name: PHPUnit tests
-        uses: php-actions/phpunit@v1
+      - name: phpunit with ext xdebug enabled
+        uses: MilesChou/docker-xdebug/7.1/@master
         with:
-          config: phpunit.xml
+          args: phpunit
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
