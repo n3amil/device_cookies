@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install Composer packages dependencies
-        uses: MilesChou/composer-action/7.1/install@master
+        uses: docker://composer:1.9.1
         with:
           args: install --no-progress --ignore-platform-reqs
       - name: PHPUnit testing
