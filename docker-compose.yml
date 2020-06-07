@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  phpunit:
+    build:
+      context: .
+    volumes:
+    - ./:/tmp

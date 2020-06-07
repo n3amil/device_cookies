@@ -8,15 +8,9 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Install Composer packages dependencies
-        uses: docker://composer:1.9.1
-        with:
-          args: install --no-progress --ignore-platform-reqs
-      - name: PHPUnit testing
-        uses: docker://phpunit/phpunit:latest
-        with:
-          args: -c phpunit.xml
+      - uses: actions/checkout@v2
+      - name: run unit tests
+        run:  docker-compose run --rm phpunit
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
