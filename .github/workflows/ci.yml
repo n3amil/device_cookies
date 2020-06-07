@@ -1,6 +1,4 @@
 on:
-  # Trigger analysis when pushing in master or pull requests, and when creating
-  # a pull request.
   push:
     branches:
       - master
@@ -9,10 +7,9 @@ on:
 jobs:
   build-test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v1
-      - uses: php-actions/composer@v1 # or alternative dependency management
+      - uses: php-actions/composer@v1
       - name: PHPUnit tests
         uses: php-actions/phpunit@v1
         with:
