@@ -1,5 +1,5 @@
 {
-  "name": "dmf/device_cookies",
+  "name": "neamil/device_cookies",
   "description": "a base for implementation in php of device cookies as described in OWASP https://www.owasp.org/index.php/Slow_Down_Online_Guessing_Attacks_with_Device_Cookies",
   "require": {
     "php": "^7.1"
@@ -19,7 +19,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "DMF\\DeviceCookies\\": "src"
+      "Neamil\\DeviceCookies\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Neamil\\DeviceCookies\\Tests\\": "tests"
     }
   }
 }

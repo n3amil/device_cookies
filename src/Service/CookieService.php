@@ -1,10 +1,10 @@
 <?php
 
 
-namespace DMF\DeviceCookies\Service;
+namespace Neamil\DeviceCookies\Service;
 
-use DMF\DeviceCookies\Models\Settings;
-use DMF\DeviceCookies\Models\User;
+use Neamil\DeviceCookies\Models\Settings;
+use Neamil\DeviceCookies\Models\User;
 use Exception;
 
 class CookieService

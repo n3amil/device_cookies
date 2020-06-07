@@ -1,8 +1,8 @@
 <?php
 
-namespace DMF\DeviceCookies\Tests\Models;
+namespace Neamil\DeviceCookies\Tests\Models;
 
-use DMF\DeviceCookies\Models\LockedOutDeviceCookie;
+use Neamil\DeviceCookies\Models\LockedOutDeviceCookie;
 use PHPUnit\Framework\TestCase;
 
 class LockedOutDeviceCookieTest extends TestCase

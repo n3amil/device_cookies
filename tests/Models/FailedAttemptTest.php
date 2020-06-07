@@ -1,8 +1,8 @@
 <?php
 
-namespace DMF\DeviceCookies\Tests\Models;
+namespace Neamil\DeviceCookies\Tests\Models;
 
-use DMF\DeviceCookies\Models\FailedAttempt;
+use Neamil\DeviceCookies\Models\FailedAttempt;
 use PHPUnit\Framework\TestCase;
 
 class FailedAttemptTest extends TestCase

@@ -2,16 +2,16 @@
 
 namespace Service;
 
-use DMF\DeviceCookies\FailedAttemptRepositoryInterface;
-use DMF\DeviceCookies\LockedOutDeviceCookieRepositoryInterface;
-use DMF\DeviceCookies\Models\FailedAttempt;
-use DMF\DeviceCookies\Models\LockedOutDeviceCookie;
-use DMF\DeviceCookies\Models\Settings;
-use DMF\DeviceCookies\Models\User;
-use DMF\DeviceCookies\Service\CookieService;
-use DMF\DeviceCookies\Service\CryptographyService;
-use DMF\DeviceCookies\Service\FailedAuthenticationService;
-use DMF\DeviceCookies\UserRepositoryInterface;
+use Neamil\DeviceCookies\FailedAttemptRepositoryInterface;
+use Neamil\DeviceCookies\LockedOutDeviceCookieRepositoryInterface;
+use Neamil\DeviceCookies\Models\FailedAttempt;
+use Neamil\DeviceCookies\Models\LockedOutDeviceCookie;
+use Neamil\DeviceCookies\Models\Settings;
+use Neamil\DeviceCookies\Models\User;
+use Neamil\DeviceCookies\Service\CookieService;
+use Neamil\DeviceCookies\Service\CryptographyService;
+use Neamil\DeviceCookies\Service\FailedAuthenticationService;
+use Neamil\DeviceCookies\UserRepositoryInterface;
 use Exception;
 use PHPUnit\Framework\TestCase;
 

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace DMF\DeviceCookies\Service;
+namespace Neamil\DeviceCookies\Service;
 
 
 class CryptographyService

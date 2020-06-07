@@ -1,10 +1,10 @@
 <?php
 
 
-namespace DMF\DeviceCookies;
+namespace Neamil\DeviceCookies;
 
-use DMF\DeviceCookies\Models\FailedAttempt;
-use DMF\DeviceCookies\Models\User;
+use Neamil\DeviceCookies\Models\FailedAttempt;
+use Neamil\DeviceCookies\Models\User;
 
 interface FailedAttemptRepositoryInterface
 {

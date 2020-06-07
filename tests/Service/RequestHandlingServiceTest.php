@@ -3,11 +3,11 @@
 namespace Service;
 
 
-use DMF\DeviceCookies\Models\Settings;
-use DMF\DeviceCookies\Models\User;
-use DMF\DeviceCookies\Service\CookieService;
-use DMF\DeviceCookies\Service\CryptographyService;
-use DMF\DeviceCookies\Service\RequestHandlingService;
+use Neamil\DeviceCookies\Models\Settings;
+use Neamil\DeviceCookies\Models\User;
+use Neamil\DeviceCookies\Service\CookieService;
+use Neamil\DeviceCookies\Service\CryptographyService;
+use Neamil\DeviceCookies\Service\RequestHandlingService;
 use PHPUnit\Framework\TestCase;
 
 class RequestHandlingServiceTest extends TestCase

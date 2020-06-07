@@ -1,14 +1,14 @@
 <?php
 
-namespace DMF\DeviceCookies\Service;
+namespace Neamil\DeviceCookies\Service;
 
-use DMF\DeviceCookies\FailedAttemptRepositoryInterface;
-use DMF\DeviceCookies\LockedOutDeviceCookieRepositoryInterface;
-use DMF\DeviceCookies\Models\FailedAttempt;
-use DMF\DeviceCookies\Models\LockedOutDeviceCookie;
-use DMF\DeviceCookies\Models\Settings;
-use DMF\DeviceCookies\Models\User;
-use DMF\DeviceCookies\UserRepositoryInterface;
+use Neamil\DeviceCookies\FailedAttemptRepositoryInterface;
+use Neamil\DeviceCookies\LockedOutDeviceCookieRepositoryInterface;
+use Neamil\DeviceCookies\Models\FailedAttempt;
+use Neamil\DeviceCookies\Models\LockedOutDeviceCookie;
+use Neamil\DeviceCookies\Models\Settings;
+use Neamil\DeviceCookies\Models\User;
+use Neamil\DeviceCookies\UserRepositoryInterface;
 
 class FailedAuthenticationService
 {

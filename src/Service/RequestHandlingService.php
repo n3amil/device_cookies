@@ -1,12 +1,12 @@
 <?php
 
 
-namespace DMF\DeviceCookies\Service;
+namespace Neamil\DeviceCookies\Service;
 
 
-use DMF\DeviceCookies\LockedOutDeviceCookieRepositoryInterface;
-use DMF\DeviceCookies\Models\Settings;
-use DMF\DeviceCookies\Models\User;
+use Neamil\DeviceCookies\LockedOutDeviceCookieRepositoryInterface;
+use Neamil\DeviceCookies\Models\Settings;
+use Neamil\DeviceCookies\Models\User;
 
 class RequestHandlingService
 {

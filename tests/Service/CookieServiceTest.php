@@ -1,11 +1,11 @@
 <?php
 
-namespace DMF\DeviceCookies\Tests\Service;
+namespace Neamil\DeviceCookies\Tests\Service;
 
-use DMF\DeviceCookies\Models\Settings;
-use DMF\DeviceCookies\Models\User;
-use DMF\DeviceCookies\Service\CookieService;
-use DMF\DeviceCookies\Service\CryptographyService;
+use Neamil\DeviceCookies\Models\Settings;
+use Neamil\DeviceCookies\Models\User;
+use Neamil\DeviceCookies\Service\CookieService;
+use Neamil\DeviceCookies\Service\CryptographyService;
 use Exception;
 use PHPUnit\Framework\TestCase;
 

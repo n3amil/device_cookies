@@ -1,10 +1,10 @@
 <?php
 
 
-namespace DMF\DeviceCookies;
+namespace Neamil\DeviceCookies;
 
 
-use DMF\DeviceCookies\Models\LockedOutDeviceCookie;
+use Neamil\DeviceCookies\Models\LockedOutDeviceCookie;
 
 interface LockedOutDeviceCookieRepositoryInterface
 {

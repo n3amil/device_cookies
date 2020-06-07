@@ -1,8 +1,8 @@
 <?php
 
-namespace DMF\DeviceCookies\Tests\Models;
+namespace Neamil\DeviceCookies\Tests\Models;
 
-use DMF\DeviceCookies\Models\User;
+use Neamil\DeviceCookies\Models\User;
 use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase

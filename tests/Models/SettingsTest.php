@@ -1,8 +1,8 @@
 <?php
 
-namespace DMF\DeviceCookies\Tests\Models;
+namespace Neamil\DeviceCookies\Tests\Models;
 
-use DMF\DeviceCookies\Models\Settings;
+use Neamil\DeviceCookies\Models\Settings;
 use PHPUnit\Framework\TestCase;
 
 class SettingsTest extends TestCase

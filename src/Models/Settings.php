@@ -1,7 +1,7 @@
 <?php
 
 
-namespace DMF\DeviceCookies\Models;
+namespace Neamil\DeviceCookies\Models;
 
 
 class Settings
