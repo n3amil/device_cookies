@@ -9,3 +9,7 @@
 a base for implementation in php of device cookies as described in OWASP https://www.owasp.org/index.php/Slow_Down_Online_Guessing_Attacks_with_Device_Cookies
 
 this base provides interfaces and services to use for an implementation
+
+# development
+## running unit tests with docker-compose
+to convenient execute the unit tests just run 'docker-compose run --rm phpunit'

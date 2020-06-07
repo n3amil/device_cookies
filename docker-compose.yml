@@ -4,4 +4,9 @@ services:
     build:
       context: .
     volumes:
-    - ./:/tmp
+    - ./reports:/tmp/reports
+    - ./src:/tmp/src
+    - ./tests:/tmp/tests
+    - ./phpunit.xml:/tmp/phpunit.xml
+    - ./composer.json:/tmp/composer.json
+    - ./composer.lock:/tmp/composer.lock
