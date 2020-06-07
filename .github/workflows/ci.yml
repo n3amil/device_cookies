@@ -15,6 +15,10 @@ jobs:
           args: install --no-progress --ignore-platform-reqs
       - name: PHPUnit testing
         uses: docker://phpunit:latest
+        with:
+          args:
+            - -c
+            - phpunit.xml
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
