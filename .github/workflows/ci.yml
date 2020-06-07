@@ -16,10 +16,9 @@ jobs:
       - name: PHPUnit testing
         uses: docker://phpunit:latest
         with:
-          args:
-            - -c
-            - phpunit.xml
+          args: -c phpunit.xml
       - name: SonarCloud Scan
+
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
