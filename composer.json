@@ -1,0 +1,24 @@
+{
+  "name": "dmf/device_cookies",
+  "description": "implementation for login protection with device cookies as described in https://www.owasp.org/index.php/Slow_Down_Online_Guessing_Attacks_with_Device_Cookies",
+  "require": {
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+    ,
+    "phpunit/phpunit": "^8.4",
+    "ext-xdebug": "*"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Johannes Seipelt",
+      "email": "johannes.seipelt@3m5.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "DMF\\DeviceCookies\\": "src"
+    }
+  }
+}
