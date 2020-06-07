@@ -14,8 +14,6 @@ jobs:
           fetch-depth: 0
       - name: run unit tests
         run:  docker-compose run --rm phpunit
-      - name: fix file permissions
-        run: chmod -R 777 ./
       - name: SonarCloud Scan
         run:  docker-compose run --rm sonar
         env:
