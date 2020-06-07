@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: php-actions/composer@v1
+        with:
+          command: composer install --no-progress --ignore-platform-reqs
       - name: PHPUnit tests
         uses: php-actions/phpunit@v1
         with:
