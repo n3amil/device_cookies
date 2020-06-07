@@ -13,8 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: php-actions/composer@v1 # or alternative dependency management
-      - uses: php-actions/phpunit@v1
-        - config: phpunit.xml
+      - name: PHPUnit tests
+        uses: php-actions/phpunit@v1
+        with:
+          config: phpunit.xml
       - name: SonarCloud Scan
           uses: sonarsource/sonarcloud-github-action@master
           env:
