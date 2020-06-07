@@ -12,8 +12,8 @@ jobs:
       - name: Install Composer packages dependencies
         uses: php-actions/composer@v1
         with:
-          command: composer
-          args: install --no-progress --ignore-platform-reqs
+          command: install
+          args: --no-progress --ignore-platform-reqs
       - name: PHPUnit tests
         uses: php-actions/phpunit@v1
         with:
