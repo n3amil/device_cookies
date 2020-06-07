@@ -15,9 +15,9 @@ RUN pecl install xdebug \
  && docker-php-ext-enable xdebug
 
 # install run script
-COPY run.sh /
-RUN chmod 700 /run.sh
+COPY run.sh /usr/src
+RUN chmod 700 /usr/src/run.sh
 
-WORKDIR /tmp
+WORKDIR /usr/src
 
-CMD /run.sh
+CMD /usr/src/run.sh

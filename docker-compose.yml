@@ -4,9 +4,16 @@ services:
     build:
       context: .
     volumes:
-    - ./reports:/tmp/reports
-    - ./src:/tmp/src
-    - ./tests:/tmp/tests
-    - ./phpunit.xml:/tmp/phpunit.xml
-    - ./composer.json:/tmp/composer.json
-    - ./composer.lock:/tmp/composer.lock
+      - ./reports:/usr/src/reports
+      - ./src:/usr/src/src
+      - ./tests:/usr/src/tests
+      - ./phpunit.xml:/usr/src/phpunit.xml
+      - ./composer.json:/usr/src/composer.json
+      - ./composer.lock:/usr/src/composer.lock
+  sonar:
+    image: sonarsource/sonar-scanner-cli
+    volumes:
+      - ./:/usr/src
+    env:
+      - SONAR_HOST_URL=https://sonarcloud.io
+      - SONAR_TOKEN=${SONAR_TOKEN}
