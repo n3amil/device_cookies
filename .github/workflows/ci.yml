@@ -10,10 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install Composer packages dependencies
-        uses: php-actions/composer@v1
-        with:
-          command: install
-          args: --no-progress --ignore-platform-reqs
+        uses: MilesChou/composer-action/7.1/install@master
+          args: install --no-progress --ignore-platform-reqs
       - name: PHPUnit tests
         uses: php-actions/phpunit@v1
         with:
