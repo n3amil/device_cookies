@@ -9,9 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: php-actions/composer@v1
+      - name: Install Composer packages dependencies
+        uses: php-actions/composer@v1
         with:
-          command: install --no-progress --ignore-platform-reqs
+          command: composer
+          args: install --no-progress --ignore-platform-reqs
       - name: PHPUnit tests
         uses: php-actions/phpunit@v1
         with:
