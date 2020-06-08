@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  phpunit:
+    build:
+      context: .
+    volumes:
+      - ./reports:/usr/src/reports
+      - ./src:/usr/src/src
+      - ./tests:/usr/src/tests
+      - ./phpunit.xml:/usr/src/phpunit.xml
+      - ./composer.json:/usr/src/composer.json
+      - ./composer.lock:/usr/src/composer.lock
+  sonar:
+    image: sonarsource/sonar-scanner-cli
+    volumes:
+      - ./:/usr/src
+    environment:
+      - SONAR_HOST_URL=${SONAR_HOST_URL}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - SONAR_TOKEN=${SONAR_TOKEN}
+      - SONAR_PULLREQUEST_BRANCH=${SONAR_PULLREQUEST_BRANCH}
+      - SONAR_PULLREQUEST_KEY=${SONAR_PULLREQUEST_KEY}
+      - SONAR_PULLREQUEST_BASE=${SONAR_PULLREQUEST_BASE}

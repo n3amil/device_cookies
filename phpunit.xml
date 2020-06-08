@@ -17,4 +17,10 @@
             <directory>./src</directory>
         </whitelist>
     </filter>
+    <logging>
+        <log type="coverage-clover"
+             target="./reports/phpunit.coverage.xml"/>
+        <log type="junit"
+             target="./reports/phpunit.xml"/>
+    </logging>
 </phpunit>
