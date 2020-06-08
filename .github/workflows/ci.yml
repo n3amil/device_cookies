@@ -22,4 +22,4 @@ jobs:
           SONAR_PULLREQUEST_PROVIDER: "github"
           SONAR_PULLREQUEST_GITHUB_REPOSITORY: ${{ github.repository }}
           SONAR_PULLREQUEST_KEY: ${{ github.event.number }}
-          SONAR_PULLREQUEST_BASE: ${{ ithub.base_ref }}
+          SONAR_PULLREQUEST_BASE: ${{ github.base_ref }}
