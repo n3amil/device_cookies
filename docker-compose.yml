@@ -20,7 +20,6 @@ services:
       - SONAR_HOST_URL=${SONAR_HOST_URL}
       - GITHUB_TOKEN=${GITHUB_TOKEN}
       - SONAR_TOKEN=${SONAR_TOKEN}
-      - SONAR_BRANCH_NAME=${SONAR_BRANCH_NAME}
   psalm:
     build:
       context: ./docker
