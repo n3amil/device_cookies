@@ -13,16 +13,17 @@ use Neamil\DeviceCookies\UserRepositoryInterface;
 class FailedAuthenticationService
 {
 
-    public static function registerFailedAuthenticationAttempt(User $cookieUser, FailedAttemptRepositoryInterface $failedAttemptsRepository, Settings $settings, LockedOutDeviceCookieRepositoryInterface $lockedOutDeviceCookieRepository,UserRepositoryInterface $userRepository): void
+    public static function registerFailedAuthenticationAttempt(User $cookieUser, FailedAttemptRepositoryInterface $failedAttemptsRepository, Settings $settings, LockedOutDeviceCookieRepositoryInterface $lockedOutDeviceCookieRepository,UserRepositoryInterface $userRepository): bool
     {
         $deviceCookieName = $settings->getDeviceCookieName();
         $requestHasDeviceCookie = CookieService::requestHasDeviceCookie($deviceCookieName);
         $cookie = self::getCookieFromRequest($requestHasDeviceCookie, $deviceCookieName);
 
         $failedAttempt = new FailedAttempt($cookieUser->getId(), time(), $cookie);
-        $failedAttemptsRepository->storeFailedAttempt($failedAttempt);
+        $stored = $failedAttemptsRepository->storeFailedAttempt($failedAttempt);
         $cookieIsValid = self::checkIfCookieIsValid($cookieUser, $settings, $requestHasDeviceCookie, $cookie);
         self::handleCookie($cookieUser, $failedAttemptsRepository, $settings, $lockedOutDeviceCookieRepository, $userRepository, $cookieIsValid, $cookie);
+        return $stored;
 
     }
 

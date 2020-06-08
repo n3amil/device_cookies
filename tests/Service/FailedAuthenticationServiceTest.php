@@ -1,6 +1,6 @@
 <?php
 
-namespace Service;
+namespace Neamil\DeviceCookies\Tests\Service;
 
 use Neamil\DeviceCookies\FailedAttemptRepositoryInterface;
 use Neamil\DeviceCookies\LockedOutDeviceCookieRepositoryInterface;
@@ -25,8 +25,7 @@ class FailedAuthenticationServiceTest extends TestCase
         $lockedRepo = new LockedRepo();
         $userRepo = new UserRepo();
         $settings = $this->buildSettings();
-
-        self::assertEmpty(FailedAuthenticationService::registerFailedAuthenticationAttempt($user,$failRepo,$settings,$lockedRepo, $userRepo));
+        self::assertTrue(FailedAuthenticationService::registerFailedAuthenticationAttempt($user,$failRepo,$settings,$lockedRepo, $userRepo));
     }
 
     public function testGetCookieFromRequestWithInvalidCookieReturnsEmptyString()
@@ -178,9 +177,9 @@ class FailedAttemptsTestRepository implements FailedAttemptRepositoryInterface
     /**
      * @inheritDoc
      */
-    public function storeFailedAttempt(FailedAttempt $failedAttempt): void
+    public function storeFailedAttempt(FailedAttempt $failedAttempt): bool
     {
-        // TODO: Implement storeFailedAttempt() method.
+        return true;
     }
 
     /**
