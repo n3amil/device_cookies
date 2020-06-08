@@ -1,7 +1,4 @@
 on:
-  push:
-    branches:
-      - master
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
@@ -21,4 +18,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_BRANCH_NAME: ${{ github.ref }}
+          SONAR_BRANCH_NAME: ${GITHUB_REF##*/}
+          SONAR_PULLREQUEST_PROVIDER: "github"
+          SONAR_PULLREQUEST_GITHUB_REPOSITORY: ${{ github.repository }}
+          SONAR_PULLREQUEST_KEY: ${{ github.event.number }}
+          SONAR_PULLREQUEST_BASE: ${{ ithub.base_ref }}
