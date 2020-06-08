@@ -1,7 +1,6 @@
 <?php
 
-namespace Service;
-
+namespace Neamil\DeviceCookies\Tests\Service;
 
 use Neamil\DeviceCookies\Models\Settings;
 use Neamil\DeviceCookies\Models\User;
