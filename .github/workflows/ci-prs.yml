@@ -1,0 +1,28 @@
+name: ci-for-prs
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: run unit tests
+        run:  docker-compose run --rm phpunit
+  phpstan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: PHPStan
+        uses: docker://oskarstark/phpstan-ga
+        env:
+          REQUIRE_DEV: true
+          CHECK_PLATFORM_REQUIREMENTS: falseci-prs.yml
+        with:
+          args: analyse -c phpstan.neon
+  psalm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: run psalm
+        run:  docker-compose run --rm psalm
