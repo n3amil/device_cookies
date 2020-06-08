@@ -22,3 +22,11 @@ jobs:
           SONAR_PULLREQUEST_BRANCH: ${{ github.head_ref }}
           SONAR_PULLREQUEST_KEY: ${{ github.event.number }}
           SONAR_PULLREQUEST_BASE: ${{ github.base_ref }}
+  phpstan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: PHPStan
+        uses: docker://oskarstark/phpstan-ga
+        with:
+          args: analyse -c phpstan.neon
