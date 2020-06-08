@@ -2,7 +2,8 @@ version: '3.7'
 services:
   phpunit:
     build:
-      context: .
+      context: ./docker
+      dockerfile: Dockerfile
     volumes:
       - ./reports:/usr/src/reports
       - ./src:/usr/src/src
@@ -21,3 +22,14 @@ services:
       - SONAR_PULLREQUEST_BRANCH=${SONAR_PULLREQUEST_BRANCH}
       - SONAR_PULLREQUEST_KEY=${SONAR_PULLREQUEST_KEY}
       - SONAR_PULLREQUEST_BASE=${SONAR_PULLREQUEST_BASE}
+  psalm:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile-psalm
+    volumes:
+      - ./reports:/tmp/reports
+      - ./src:/tmp/src
+      - ./tests:/tmp/tests
+      - ./psalm.xml:/tmp/psalm.xml
+      - ./composer.json:/tmp/composer.json
+      - ./composer.lock:/tmp/composer.lock

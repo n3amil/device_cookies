@@ -4,3 +4,4 @@ vendor
 reports
 /.sonar/
 /.scannerwork/
+/psalm/
