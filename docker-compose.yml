@@ -17,3 +17,4 @@ services:
     environment:
       - SONAR_HOST_URL=https://sonarcloud.io
       - SONAR_TOKEN=${SONAR_TOKEN}
+      - SONAR_BRANCH_NAME=${SONAR_BRANCH_NAME}
