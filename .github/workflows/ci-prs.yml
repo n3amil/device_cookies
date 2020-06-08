@@ -12,7 +12,7 @@ jobs:
       - name: create sonar directorie with correct file permissions
         run: mkdir .sonar .sonar/cache .scannerwork && sudo chmod -R 777 .sonar && sudo chmod -R 777 .scannerwork
       - name: SonarCloud Scan
-        run:  sonar-scanner -Dsonar.pullrequest.branch=${{ github.head_ref }} -Dsonar.pullrequest.key=${{ github.event.number }} -Dsonar.pullrequest.base=${{ github.base_ref }}
+        run: docker-compose run --rm sonar sonar-scanner -Dsonar.pullrequest.branch=${{ github.head_ref }} -Dsonar.pullrequest.key=${{ github.event.number }} -Dsonar.pullrequest.base=${{ github.base_ref }}
         env:
           SONAR_HOST_URL: 'https://sonarcloud.io'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
