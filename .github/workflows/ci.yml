@@ -14,6 +14,8 @@ jobs:
           fetch-depth: 0
       - name: run unit tests
         run:  docker-compose run --rm phpunit
+      - name: create sonar directorie with correct file permissions
+        run: mkdir .sonar .sonar/cache .scannerwork && sudo chmod -R 777 .sonar && sudo chmod -R 777 .scannerwork
       - name: SonarCloud Scan
         run:  docker-compose run --rm sonar
         env:
