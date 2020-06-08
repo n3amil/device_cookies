@@ -9,7 +9,8 @@
     ,
     "phpunit/phpunit": "^8.4",
     "ext-xdebug": "*",
-    "phpstan/phpstan": "^0.12.26"
+    "phpstan/phpstan": "^0.12.26",
+    "vimeo/psalm": "^3.11"
   },
   "license": "MIT",
   "authors": [

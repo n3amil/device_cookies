@@ -33,3 +33,9 @@ jobs:
           CHECK_PLATFORM_REQUIREMENTS: false
         with:
           args: analyse -c phpstan.neon
+  psalm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: run psalm
+        run:  docker-compose run --rm psalm
