@@ -12,4 +12,4 @@ this base provides interfaces and services to use for an implementation
 
 # development
 ## running unit tests with docker-compose
-to convenient execute the unit tests just run 'docker-compose run --rm phpunit'
+to conveniently execute the unit tests just run 'docker-compose run --rm phpunit'
