@@ -4,6 +4,7 @@ services:
     build:
       context: ./docker
       dockerfile: Dockerfile
+    #we need mount to /usr/src as this is the path sonar-scanner expects the files and absolut paths in the generated cove-coverage files will not match from container to container
     volumes:
       - ./reports:/usr/src/reports
       - ./src:/usr/src/src
@@ -19,9 +20,7 @@ services:
       - SONAR_HOST_URL=${SONAR_HOST_URL}
       - GITHUB_TOKEN=${GITHUB_TOKEN}
       - SONAR_TOKEN=${SONAR_TOKEN}
-      - SONAR_PULLREQUEST_BRANCH=${SONAR_PULLREQUEST_BRANCH}
-      - SONAR_PULLREQUEST_KEY=${SONAR_PULLREQUEST_KEY}
-      - SONAR_PULLREQUEST_BASE=${SONAR_PULLREQUEST_BASE}
+      - SONAR_BRANCH_NAME=${SONAR_BRANCH_NAME}
   psalm:
     build:
       context: ./docker
