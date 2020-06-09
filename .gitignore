@@ -5,3 +5,4 @@ reports
 /.sonar/
 /.scannerwork/
 /psalm/
+/docker-compose.override.yml
